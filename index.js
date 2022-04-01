@@ -101,6 +101,7 @@ const invoicesFormatted = invoices.map(({ results }) => {
     return {
         invoiceNumber: invoice.invoiceNo,
         invoiceTotal: invoice.total,
+        invoiceDue: invoice.balanceDue,
         clientName: invoice.client.name,
         invoiceNotes: invoice.setting.comment,
     }
@@ -112,6 +113,7 @@ const csvWriter = createCsvWriter({
     header: [
         { id: "invoiceNumber", title: "Invoice Number" },
         { id: "invoiceTotal", title: "Invoice Total" },
+        { id: "invoiceDue", title: "Invoice Balance Due" },
         { id: "clientName", title: "Invoice Client Name" },
         { id: "invoiceNotes", title: "Invoice Notes" },
     ],
