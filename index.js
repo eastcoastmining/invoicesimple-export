@@ -103,6 +103,9 @@ const invoicesFormatted = invoices.map(({ results }) => {
         invoiceTotal: invoice.total,
         invoiceDue: invoice.balanceDue,
         clientName: invoice.client.name,
+        invoiceItems: invoice.items
+            .map((item) => `${item.quantity}X ${item.code}`)
+            .join("\n"),
         invoiceNotes: invoice.setting.comment,
     }
 })
@@ -115,6 +118,7 @@ const csvWriter = createCsvWriter({
         { id: "invoiceTotal", title: "Invoice Total" },
         { id: "invoiceDue", title: "Invoice Balance Due" },
         { id: "clientName", title: "Invoice Client Name" },
+        { id: "invoiceItems", title: "Invoice Items" },
         { id: "invoiceNotes", title: "Invoice Notes" },
     ],
 })
