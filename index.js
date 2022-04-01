@@ -105,7 +105,10 @@ const invoicesFormatted = invoices.map(({ results }) => {
         clientName: invoice.client.name,
         invoiceItems: invoice.items
             .map(
-                (item) => `${item.quantity}X ${item.code}\n${item.description}`,
+                (item) =>
+                    `${item.quantity}X ${item.code}\n${
+                        item.description ? item.description : ""
+                    }`,
             )
             .join("\n"),
         invoiceNotes: invoice.setting.comment,
