@@ -119,8 +119,6 @@ const csvWriter = createCsvWriter({
     ],
 })
 
-csvWriter
-    .writeRecords(invoicesFormatted) // returns a promise
-    .then(() => {
-        console.log("Finished Export: invoicesimple-export.csv")
-    })
+csvWriter.writeRecords(invoicesFormatted).then(() => {
+    console.log("Finished Export: invoicesimple-export.csv")
+})
