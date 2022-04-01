@@ -1,0 +1,25 @@
+{
+    "name": "invoicesimple-export",
+    "version": "0.0.0",
+    "description": "Export Invoices From invoicesimple.com As CSV",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eastcoastmining/invoicesimple-export.git"
+    },
+    "author": "s0kil",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/eastcoastmining/invoicesimple-export/issues"
+    },
+    "homepage": "https://github.com/eastcoastmining/invoicesimple-export#readme",
+    "dependencies": {
+        "csv-writer": "^1.6.0",
+        "dotenv": "^16.0.0",
+        "node-fetch": "^3.2.3"
+    }
+}
